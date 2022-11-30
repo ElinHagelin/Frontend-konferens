@@ -1,0 +1,11 @@
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--background-blue: #4785AB;
+	--text-color-dark: #0A0F24;
+	--button-color-light: #FFF6D9;
+	--text-container-background: #FDF4F2;
+}
