@@ -1,0 +1,20 @@
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--background-blue: #4785AB;
+	--text-color-dark: #0A0F24;
+	--button-color-light: #FFF6D9;
+	--text-container-background: rgba(253, 244, 242, 0.7);
+}
+
+body {
+	background-image: url(/images/hero-image.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	background-attachment: fixed;
+}

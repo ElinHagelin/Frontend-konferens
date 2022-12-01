@@ -1,10 +1,5 @@
 header {
 	height: 100vh;
-	background-image: url(/images/hero-image.png);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	position: relative;
 }
 
 .header>.hero {
@@ -86,7 +81,7 @@ header {
 	}
 }
 
-@media screen and (min-width: 600px) and (max-width: 899px) {
+@media screen and (min-width: 600px) {
 	.header>.hero {
 		width: 100%;
 		height: 100%;
@@ -96,7 +91,7 @@ header {
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 2fr 1fr 1fr 1fr;
 		grid-template-areas:
-			"h1 ."
+			". ."
 			"h1 h2"
 			". h3"
 			"seminars sign-up";
@@ -106,6 +101,7 @@ header {
 		font-size: 3em;
 		margin-bottom: 1em;
 		grid-column: 1;
+		align-self: flex-start;
 	}
 
 	.header>.hero>h2 {
@@ -124,7 +120,14 @@ header {
 	}
 
 	.header>.hero>span {
+		display: flex;
+		gap: 1em;
+		justify-self: center;
 		align-self: flex-start;
+	}
+
+	.header>.hero>span>h3 {
+		font-size: 1.2em;
 	}
 
 	.header>.hero>.top-button {
@@ -152,61 +155,18 @@ header {
 	}
 
 	.header>.hero>span>h3 {
-		font-size: 1.5em;
-	}
-
-	.header>.hero {
-		width: 100%;
-		height: 100%;
-		background-image: linear-gradient(to bottom right,
-				rgba(71, 133, 171, 0) 50%,
-				rgba(71, 133, 171, 1) 50%);
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 2fr 1fr 1fr 1fr;
-		grid-template-areas:
-			"h1 ."
-			"h1 h2"
-			". h3"
-			"seminars sign-up";
-	}
-
-	.header>.hero>h1 {
-		margin-bottom: 1em;
-		grid-column: 1;
-	}
-
-	.header>.hero>h2 {
-		align-self: center;
-	}
-
-	.header>.hero>h2,
-	.header>.hero>span {
-		grid-column: 2;
-	}
-
-	.header>.hero>h2,
-	.header>.hero>span>h3 {
-		color: var(--button-color-light);
+		font-size: 2em;
 	}
 
 	.header>.hero>span {
-		align-self: flex-start;
+		display: flex;
+		gap: 1em;
+		justify-self: center;
 	}
 
 	.header>.hero>.top-button {
-		margin: 0 2em;
-	}
-
-	.header>.hero>.seminars {
-		grid-column: 1;
-		align-self: flex-start;
-		justify-self: flex-end;
-	}
-
-	.header>.hero>.sign-up {
-		grid-column: 2;
-		align-self: flex-start;
-		justify-self: flex-start;
+		font-size: 1.4em;
+		padding: 0.5em 1em;
 	}
 
 }
