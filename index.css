@@ -1,0 +1,212 @@
+header {
+	height: 100vh;
+	background-image: url(/images/hero-image.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+
+.header>.hero {
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 3fr 1fr 1fr 2fr 2fr;
+	grid-template-areas:
+		"h1"
+		"h2"
+		"h3"
+		"seminars"
+		"sign-up";
+}
+
+.header>.hero>h1,
+.header>.hero>h2,
+.header>.hero>span>h3 {
+	font-size: 2em;
+	color: var(--text-color-dark);
+	text-align: center;
+}
+
+.header>.hero>h1 {
+	grid-area: h1;
+	align-self: flex-end;
+}
+
+.header>.hero>h2 {
+	grid-area: h2;
+	align-self: center;
+}
+
+.header>.hero>span {
+	grid-area: h3;
+
+}
+
+.header>.hero>span>h3 {
+	font-size: 1.2em;
+}
+
+.header>.hero>.top-button {
+	/* margin-bottom: 3em; */
+	font-size: 1.2em;
+	/* margin: 1em 0; */
+	padding: 0.5em 1em;
+	background-color: var(--button-color-light);
+	border-radius: 2em;
+	text-decoration: none;
+	color: var(--text-color-dark);
+	max-width: 7em;
+	justify-self: center;
+	text-align: center;
+	max-height: 2.5em;
+}
+
+.header>.hero>.seminars {
+	grid-area: seminars;
+	align-self: center;
+}
+
+.header>.hero>.sign-up {
+	grid-area: sign-up;
+	align-self: start;
+}
+
+
+@media screen and (min-width: 350px) and (max-width: 599px) {
+
+	.header>.hero>h1,
+	.header>.hero>h2 {
+		font-size: 3em;
+	}
+
+	.header>.hero>span>h3 {
+		font-size: 1.4em;
+	}
+}
+
+@media screen and (min-width: 600px) and (max-width: 899px) {
+	.header>.hero {
+		width: 100%;
+		height: 100%;
+		background-image: linear-gradient(to bottom right,
+				rgba(71, 133, 171, 0) 50%,
+				rgba(71, 133, 171, 1) 50%);
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 2fr 1fr 1fr 1fr;
+		grid-template-areas:
+			"h1 ."
+			"h1 h2"
+			". h3"
+			"seminars sign-up";
+	}
+
+	.header>.hero>h1 {
+		font-size: 3em;
+		margin-bottom: 1em;
+		grid-column: 1;
+	}
+
+	.header>.hero>h2 {
+		font-size: 3em;
+		align-self: center;
+	}
+
+	.header>.hero>h2,
+	.header>.hero>span {
+		grid-column: 2;
+	}
+
+	.header>.hero>h2,
+	.header>.hero>span>h3 {
+		color: var(--button-color-light);
+	}
+
+	.header>.hero>span {
+		align-self: flex-start;
+	}
+
+	.header>.hero>.top-button {
+		margin: 0 2em;
+	}
+
+	.header>.hero>.seminars {
+		grid-column: 1;
+		align-self: flex-start;
+		justify-self: flex-end;
+	}
+
+	.header>.hero>.sign-up {
+		grid-column: 2;
+		align-self: flex-start;
+		justify-self: flex-start;
+	}
+}
+
+@media screen and (min-width: 900px) {
+
+	.header>.hero>h1,
+	.header>.hero>h2 {
+		font-size: 4em;
+	}
+
+	.header>.hero>span>h3 {
+		font-size: 1.5em;
+	}
+
+	.header>.hero {
+		width: 100%;
+		height: 100%;
+		background-image: linear-gradient(to bottom right,
+				rgba(71, 133, 171, 0) 50%,
+				rgba(71, 133, 171, 1) 50%);
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 2fr 1fr 1fr 1fr;
+		grid-template-areas:
+			"h1 ."
+			"h1 h2"
+			". h3"
+			"seminars sign-up";
+	}
+
+	.header>.hero>h1 {
+		margin-bottom: 1em;
+		grid-column: 1;
+	}
+
+	.header>.hero>h2 {
+		align-self: center;
+	}
+
+	.header>.hero>h2,
+	.header>.hero>span {
+		grid-column: 2;
+	}
+
+	.header>.hero>h2,
+	.header>.hero>span>h3 {
+		color: var(--button-color-light);
+	}
+
+	.header>.hero>span {
+		align-self: flex-start;
+	}
+
+	.header>.hero>.top-button {
+		margin: 0 2em;
+	}
+
+	.header>.hero>.seminars {
+		grid-column: 1;
+		align-self: flex-start;
+		justify-self: flex-end;
+	}
+
+	.header>.hero>.sign-up {
+		grid-column: 2;
+		align-self: flex-start;
+		justify-self: flex-start;
+	}
+
+}
