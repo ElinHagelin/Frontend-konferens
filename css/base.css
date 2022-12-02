@@ -11,7 +11,12 @@
 }
 
 body {
-	background-image: url(/images/hero-image.png);
+	background-image: linear-gradient(to bottom right,
+			rgba(71, 133, 171, 0) 30%,
+			rgba(71, 133, 171, 0.3) 40%,
+			rgba(71, 133, 171, 0.5) 60%,
+			rgba(71, 133, 171, 1) 100%),
+		url(/images/hero-image.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
