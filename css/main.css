@@ -1,7 +1,7 @@
 main {
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 7em 17em 16em 16em 4em 3em 40em 10em;
+	grid-template-rows: 7em 17em 16em 16em 4em 3em 73em 7em;
 	grid-template-areas:
 		"main-heading"
 		"what"
@@ -113,6 +113,10 @@ main {
 	grid-area: cards-friday;
 	align-self: flex-start;
 	justify-self: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
 }
 
 .cards-saturday,
@@ -122,38 +126,52 @@ main {
 	justify-self: center;
 }
 
-.sign-up-bottom {
-	grid-area: sign-up-bottom;
-}
-
 .seminar-card {
+	max-width: 25em;
+	min-height: 15em;
+	max-height: 25em;
 	background-color: var(--text-container-background);
 	border-radius: 1em;
 	padding: 1em;
-	display: flex;
-	justify-content: space-between;
 	margin: 1em 0;
+	/* text-align: center; */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .seminar-card>div {
-	max-height: 150px;
-	max-width: 150px;
+	height: 150px;
+	width: 100%;
 	object-fit: cover;
+	text-align: center;
 }
 
 .seminar-card>div>img {
 	height: 150px;
 	width: 150px;
-
 }
 
-.seminar-card h5 {
+.seminar-card>.seminar-description>h5 {
 	font-size: 1.2em;
+	margin: 0.5em 0;
+	text-align: center;
+}
+
+.time-and-place {
+	margin-top: 1em;
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
 }
 
 .sign-up-bottom {
+	grid-area: sign-up-bottom;
 	justify-self: center;
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .sign-up-bottom>h6 {
@@ -177,7 +195,7 @@ main {
 @media screen and (min-width: 800px) {
 	main {
 		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 7em 11em 14em 5em 3em 40em 10em;
+		grid-template-rows: 7em 11em 14em 5em 3em 68em 7em;
 		grid-template-areas:
 			"main-heading main-heading"
 			"what what"
@@ -188,21 +206,6 @@ main {
 			"sign-up-bottom sign-up-bottom";
 		gap: 2em;
 	}
-
-	/* .information-container {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: center;
-		align-items: center;
-		margin: 0 2em;
-	} */
-
-	/* .what,
-	.where,
-	.when {
-		margin: 0 1em;
-	} */
 
 	.main-heading {
 		font-size: 1.9em;
@@ -243,9 +246,18 @@ main {
 		align-self: center;
 	}
 
+	.cards-friday,
+	.cards-saturday,
+	.cards-sunday {
+		padding: 0 3em;
+	}
+
 	.seminar-card {
-		max-width: 52em;
-		margin: 1em 2em 1em 2em;
+		margin: 1em;
+	}
+
+	.seminar-card>.seminar-description>h5 {
+		font-size: 1.5em;
 	}
 
 	.sign-up-bottom>h6 {
@@ -259,7 +271,14 @@ main {
 
 }
 
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 978px) and (max-width: 1410) {
+	main {
+		grid-template-rows: 10em 20em 5em 3em 20em 10em;
+	}
+
+}
+
+@media screen and (min-width: 1410px) {
 	main {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
@@ -320,6 +339,8 @@ main {
 
 	.cards-friday {
 		width: 100%;
+		height: 25em;
+		padding: 0;
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		column-gap: 2em;
@@ -328,13 +349,26 @@ main {
 	}
 
 	.seminar-card {
-		max-width: 25em;
-		height: 30em;
 		margin: 0;
+	}
+
+	.seminar-description {
+		justify-self: center;
+		align-self: center;
 	}
 
 	.seminar-card p {
 		font-size: 1.2em;
+	}
+
+	.seminar-card h5 {
+		font-size: 1.4em;
+		text-align: center;
+	}
+
+	.seminar-card>div {
+		height: 180px;
+		width: 180px;
 	}
 
 	.card1 {
