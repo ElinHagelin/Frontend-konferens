@@ -1,0 +1,107 @@
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: var(--text-color-dark);
+}
+
+h1 {
+	margin: 2em 0;
+	font-size: 1.3em;
+}
+
+
+
+.friday,
+.saturday,
+.sunday {
+	font-size: 1.1em;
+}
+
+.saturday,
+.sunday {
+	margin-top: 1.5em;
+}
+
+form {
+	background-color: var(--text-container-background);
+	border-radius: 1em;
+	max-width: 60em;
+	min-height: 35em;
+	display: flex;
+	flex-direction: column;
+	padding: 2em;
+	min-width: 30em;
+}
+
+form input {
+	margin-bottom: 1em;
+	height: 2em;
+	border: 1px solid var(--input-border-color);
+	padding: 0.5em;
+
+}
+
+form label {
+	cursor: pointer;
+}
+
+.zip-and-city {
+	display: flex;
+	justify-content: space-between;
+	gap: 1em;
+}
+
+.zip-and-city>span {
+	display: flex;
+	flex-direction: column;
+
+}
+
+.buy-pass,
+.food-preference {
+	margin: 2em 0 1em 0;
+}
+
+.radio-button {
+	display: flex;
+	align-items: center;
+	margin: 0.25em 0;
+}
+
+.radio-button>input {
+	margin: 0;
+	cursor: pointer;
+}
+
+.radio-button>label {
+	margin-left: 1em;
+}
+
+button {
+	background-color: var(--background-blue);
+	color: var(--button-color-light);
+	border-style: none;
+	padding: 1em 2em;
+	max-width: 12em;
+	border-radius: 2em;
+	align-self: center;
+	margin-top: 3em;
+	font-size: 1em;
+	cursor: pointer;
+}
+
+@media screen and (min-width: 900px) {
+
+	h1 {
+		font-size: 1.5em;
+	}
+
+	.friday,
+	.saturday,
+	.sunday {
+		font-size: 1.2em;
+	}
+
+}
