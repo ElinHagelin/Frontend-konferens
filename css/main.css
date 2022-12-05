@@ -91,6 +91,7 @@ main {
 	justify-self: center;
 	align-self: center;
 	justify-content: space-around;
+	min-width: 15em;
 	max-width: 25em;
 	flex-grow: 1;
 }
@@ -105,6 +106,16 @@ main {
 .days>a:active {
 	font-size: 1.4em;
 	font-weight: bold;
+}
+
+.saturday-seminars,
+.sunday-seminars {
+	display: none;
+}
+
+.days>.arrow-back>img,
+.days>.arrow-forward>img {
+	height: 1.2em;
 }
 
 
@@ -271,6 +282,23 @@ main {
 
 }
 
+@media screen and (min-width: 980px) {
+	.days {
+		min-width: 40em;
+		max-width: 600em;
+	}
+
+	.saturday-seminars,
+	.sunday-seminars {
+		display: unset;
+	}
+
+	.days>.arrow-back>img,
+	.days>.arrow-forward>img {
+		display: none;
+	}
+}
+
 @media screen and (min-width: 978px) and (max-width: 1410) {
 	main {
 		grid-template-rows: 10em 20em 5em 3em 20em 10em;
@@ -326,6 +354,11 @@ main {
 	.what {
 		max-width: 25em;
 		justify-self: flex-end;
+	}
+
+	.days {
+		min-width: 60em;
+		max-width: 120em;
 	}
 
 	.days>a {
