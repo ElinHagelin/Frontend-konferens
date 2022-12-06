@@ -1,13 +1,15 @@
 .seminar-slider {
 	grid-area: seminar-slider;
-	/* width: 100vw; */
 	position: relative;
 	padding-top: 5em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 #seminars {
 	text-align: center;
-	font-size: 1.5em;
+	font-size: 1.3em;
 }
 
 #cards-friday,
@@ -20,6 +22,7 @@
 
 .seminar-slides {
 	padding-top: 5em;
+	height: 100%;
 }
 
 .seminar-slides>label {
@@ -67,7 +70,7 @@ input:checked+label {
 }
 
 input:checked+label+div {
-	max-height: 100vh;
+	max-height: fit-content;
 	visibility: visible;
 	opacity: 1;
 }
@@ -85,7 +88,7 @@ input:checked+label+div * {
 	border-radius: 1em;
 	padding: 1em;
 	margin: 1em 0;
-	/* text-align: center; */
+	text-align: center;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -133,6 +136,12 @@ input:checked+label+div * {
 	.seminar-card {
 		padding: 1em;
 		margin: 1em 1em;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	#seminars {
+		font-size: 1.9em;
 	}
 }
 

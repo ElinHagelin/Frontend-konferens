@@ -16,25 +16,16 @@ body {
 main {
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 7em 17em 16em 16em 73em 7em;
+	grid-template-rows: 7em 17em 16em 16em minmax(60em 95em);
 	grid-template-areas:
 		"main-heading"
 		"what"
 		"where"
 		"when"
-		"seminar-slider"
-		"sign-up-bottom";
-
+		"seminar-slider";
+	/* "sign-up-bottom"; */
+	gap: 2em
 }
-
-/* .information-container {
-	display: flex;
-	flex-direction: column;
-	flex-wrap: no-wrap;
-	gap: 2em;
-	justify-content: center;
-	align-items: center;
-} */
 
 .main-heading {
 	grid-area: main-heading;
@@ -96,8 +87,7 @@ main {
 }
 
 .sign-up-bottom {
-	grid-area: sign-up-bottom;
-	justify-self: center;
+	margin: 3em 0;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -125,13 +115,14 @@ main {
 @media screen and (min-width: 800px) {
 	main {
 		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 7em 11em 14em 68em 7em;
+		grid-template-rows: 7em 11em 14em minmax(60em 95em);
+		;
 		grid-template-areas:
 			"main-heading main-heading"
 			"what what"
 			"where when"
-			"seminar-slider seminar-slider"
-			"sign-up-bottom sign-up-bottom";
+			"seminar-slider seminar-slider";
+		/* "sign-up-bottom sign-up-bottom"; */
 		gap: 2em;
 	}
 
@@ -170,9 +161,17 @@ main {
 }
 
 
-@media screen and (min-width: 978px) and (max-width: 1410) {
+@media screen and (min-width: 881px) {
 	main {
-		grid-template-rows: 10em 20em 5em 3em 20em 10em;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 7em 11em 14em minmax(60em 95em);
+		grid-template-areas:
+			"main-heading main-heading"
+			"what what"
+			"where when"
+			"seminar-slider seminar-slider";
+		/* "sign-up-bottom sign-up-bottom"; */
+		gap: 2em;
 	}
 
 }
@@ -181,12 +180,12 @@ main {
 	main {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-rows: 10em 20em 40em 10em;
+		grid-template-rows: 10em 20em minmax(60em 95em);
 		grid-template-areas:
 			"main-heading main-heading main-heading"
 			"what when where"
-			"seminar-slider seminar-slider seminar-slider"
-			"sign-up-bottom sign-up-bottom sign-up-bottom";
+			"seminar-slider seminar-slider seminar-slider";
+		/* "sign-up-bottom sign-up-bottom sign-up-bottom"; */
 		gap: 2em;
 	}
 
