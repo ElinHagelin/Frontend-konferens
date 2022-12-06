@@ -49,6 +49,7 @@ header {
 	/* margin: 1em 0; */
 	padding: 0.5em 1em;
 	background-color: var(--button-color-light);
+	box-shadow: 0 10px 20px -8px var(--text-color-dark);
 	border-radius: 2em;
 	text-decoration: none;
 	color: var(--text-color-dark);

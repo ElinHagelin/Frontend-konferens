@@ -1,0 +1,84 @@
+.seminar-slider {
+	width: 100vw;
+}
+
+#cards-friday {
+	display: flex;
+}
+
+.seminar-slides>label {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	user-select: none;
+}
+
+.seminar-slides>label>a {
+	color: var(--text-color-dark);
+	text-decoration: none;
+	font-size: 1.1em;
+}
+
+input+label+div {
+	overflow: hidden;
+	visibility: hidden;
+	max-height: 0;
+	transition: all 0.8s ease;
+}
+
+/* #cards-friday *,
+#cards-saturday *,
+#cards-sunday * {
+	opacity: 0;
+	transition: all 0.8s ease;
+} */
+
+input {
+	display: none;
+}
+
+input:checked+label+div {
+	padding: 20px;
+	max-height: 100vh;
+	visibility: visible;
+	opacity: 1;
+
+}
+
+input:checked+label+div * {
+	opacity: 1;
+}
+
+.seminar-card {
+	max-width: 25em;
+	min-height: 25em;
+	max-height: 25em;
+	background-color: var(--text-container-background);
+	box-shadow: 0 10px 20px -8px var(--text-color-dark);
+	border-radius: 1em;
+	padding: 1em;
+	margin: 1em 2em;
+	/* text-align: center; */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.seminar-card>div {
+	height: 150px;
+	width: 100%;
+	object-fit: cover;
+	text-align: center;
+}
+
+.seminar-card>div>img {
+	height: 150px;
+	width: 150px;
+}
+
+.seminar-card>.seminar-description>h5 {
+	font-size: 1.2em;
+	margin: 0.5em 0;
+	text-align: center;
+}

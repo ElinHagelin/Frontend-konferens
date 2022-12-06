@@ -1,15 +1,28 @@
+body {
+	background-image: linear-gradient(to bottom right,
+			rgba(71, 133, 171, 0) 30%,
+			rgba(71, 133, 171, 0.3) 40%,
+			rgba(71, 133, 171, 0.5) 60%,
+			rgba(71, 133, 171, 1) 100%),
+		url(/images/hero-image.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	background-attachment: fixed;
+	color: var(--text-color-dark);
+}
+
 main {
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 7em 17em 16em 16em 4em 3em 73em 7em;
+	grid-template-rows: 7em 17em 16em 16em 73em 7em;
 	grid-template-areas:
 		"main-heading"
 		"what"
 		"where"
 		"when"
-		"seminars-heading"
-		"days"
-		"cards-friday"
+		"seminar-slider"
 		"sign-up-bottom";
 
 }
@@ -34,6 +47,7 @@ main {
 
 .information-container {
 	background-color: var(--text-container-background);
+	box-shadow: 0 10px 20px -8px var(--text-color-dark);
 	border-radius: 1em;
 	padding: 1em;
 }
@@ -58,7 +72,6 @@ main {
 
 .what {
 	grid-area: what;
-	/* flex-grow: 2; */
 	flex-shrink: 1;
 	max-width: 25em;
 }
@@ -66,108 +79,13 @@ main {
 .where {
 	grid-area: where;
 	flex-shrink: 1;
-	/* flex-grow: 1; */
 	max-width: 25em;
 }
 
 .when {
 	grid-area: when;
 	flex-shrink: 1;
-	/* flex-grow: 1; */
 	max-width: 25em;
-}
-
-/* #seminars {} */
-
-#seminars {
-	grid-area: seminars-heading;
-	justify-self: center;
-	font-size: 1.3em;
-}
-
-.days {
-	grid-area: days;
-	display: flex;
-	justify-self: center;
-	align-self: center;
-	justify-content: space-around;
-	min-width: 15em;
-	max-width: 25em;
-	flex-grow: 1;
-}
-
-.days>a {
-	text-decoration: none;
-	color: var(--text-color-dark);
-	font-size: 1.3em;
-
-}
-
-.days>a:active {
-	font-size: 1.4em;
-	font-weight: bold;
-}
-
-.saturday-seminars,
-.sunday-seminars {
-	display: none;
-}
-
-.days>.arrow-back>img,
-.days>.arrow-forward>img {
-	height: 1.2em;
-}
-
-
-
-.cards-friday {
-	grid-area: cards-friday;
-	align-self: flex-start;
-	justify-self: center;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-
-}
-
-.cards-saturday,
-.cards-sunday {
-	display: none;
-	align-self: flex-start;
-	justify-self: center;
-}
-
-.seminar-card {
-	max-width: 25em;
-	min-height: 15em;
-	max-height: 25em;
-	background-color: var(--text-container-background);
-	border-radius: 1em;
-	padding: 1em;
-	margin: 1em 0;
-	/* text-align: center; */
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.seminar-card>div {
-	height: 150px;
-	width: 100%;
-	object-fit: cover;
-	text-align: center;
-}
-
-.seminar-card>div>img {
-	height: 150px;
-	width: 150px;
-}
-
-.seminar-card>.seminar-description>h5 {
-	font-size: 1.2em;
-	margin: 0.5em 0;
-	text-align: center;
 }
 
 .time-and-place {
@@ -194,6 +112,7 @@ main {
 	font-size: 1.2em;
 	text-decoration: none;
 	background-color: var(--button-color-light);
+	box-shadow: 0 10px 20px -8px var(--text-color-dark);
 	padding: 0.5em 1em;
 	color: var(--text-color-dark);
 	max-width: 7em;
@@ -206,14 +125,12 @@ main {
 @media screen and (min-width: 800px) {
 	main {
 		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 7em 11em 14em 5em 3em 68em 7em;
+		grid-template-rows: 7em 11em 14em 68em 7em;
 		grid-template-areas:
 			"main-heading main-heading"
 			"what what"
 			"where when"
-			"seminars-heading seminars-heading"
-			"days days"
-			"cards-friday cards-friday"
+			"seminar-slider seminar-slider"
 			"sign-up-bottom sign-up-bottom";
 		gap: 2em;
 	}
@@ -243,34 +160,6 @@ main {
 		margin-right: 2em;
 	}
 
-	.days {
-		max-width: 52em;
-	}
-
-	.days>a:hover {
-		font-size: 1.4em;
-		font-weight: bold;
-	}
-
-	#seminars {
-		font-size: 1.9em;
-		align-self: center;
-	}
-
-	.cards-friday,
-	.cards-saturday,
-	.cards-sunday {
-		padding: 0 3em;
-	}
-
-	.seminar-card {
-		margin: 1em;
-	}
-
-	.seminar-card>.seminar-description>h5 {
-		font-size: 1.5em;
-	}
-
 	.sign-up-bottom>h6 {
 		font-size: 1.5em;
 	}
@@ -278,26 +167,8 @@ main {
 	.sign-up-bottom>a {
 		font-size: 1.4em;
 	}
-
-
 }
 
-@media screen and (min-width: 980px) {
-	.days {
-		min-width: 40em;
-		max-width: 600em;
-	}
-
-	.saturday-seminars,
-	.sunday-seminars {
-		display: unset;
-	}
-
-	.days>.arrow-back>img,
-	.days>.arrow-forward>img {
-		display: none;
-	}
-}
 
 @media screen and (min-width: 978px) and (max-width: 1410) {
 	main {
@@ -310,13 +181,11 @@ main {
 	main {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-rows: 10em 20em 5em 3em 40em 10em;
+		grid-template-rows: 10em 20em 40em 10em;
 		grid-template-areas:
 			"main-heading main-heading main-heading"
 			"what when where"
-			"seminars-heading seminars-heading seminars-heading"
-			"days days days"
-			"cards-friday cards-friday cards-friday"
+			"seminar-slider seminar-slider seminar-slider"
 			"sign-up-bottom sign-up-bottom sign-up-bottom";
 		gap: 2em;
 	}
@@ -356,68 +225,4 @@ main {
 		justify-self: flex-end;
 	}
 
-	.days {
-		min-width: 60em;
-		max-width: 120em;
-	}
-
-	.days>a {
-		font-size: 1.5em;
-	}
-
-	.days>a:hover {
-		font-size: 1.6em;
-		font-weight: bold;
-	}
-
-	.cards-friday {
-		width: 100%;
-		height: 25em;
-		padding: 0;
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-		column-gap: 2em;
-		grid-template-areas:
-			"card1 card2 card3";
-	}
-
-	.seminar-card {
-		margin: 0;
-	}
-
-	.seminar-description {
-		justify-self: center;
-		align-self: center;
-	}
-
-	.seminar-card p {
-		font-size: 1.2em;
-	}
-
-	.seminar-card h5 {
-		font-size: 1.4em;
-		text-align: center;
-	}
-
-	.seminar-card>div {
-		height: 180px;
-		width: 180px;
-	}
-
-	.card1 {
-		grid-area: card1;
-		justify-self: flex-end;
-
-	}
-
-	.card2 {
-		grid-area: card2;
-		justify-self: center;
-
-	}
-
-	.card3 {
-		grid-area: card3;
-		justify-self: flex-start;
-	}
 }
