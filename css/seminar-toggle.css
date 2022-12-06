@@ -1,0 +1,143 @@
+.seminar-slider {
+	grid-area: seminar-slider;
+	/* width: 100vw; */
+	position: relative;
+	padding-top: 5em;
+}
+
+#seminars {
+	text-align: center;
+	font-size: 1.5em;
+}
+
+#cards-friday,
+#cards-saturday,
+#cards-sunday {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.seminar-slides {
+	padding-top: 5em;
+}
+
+.seminar-slides>label {
+	cursor: pointer;
+	display: inline-block;
+	position: absolute;
+	user-select: none;
+	color: var(--text-color-dark);
+	font-size: 1.2em;
+	padding: 0 0.2em;
+}
+
+.friday-seminars {
+	top: 7em;
+	left: 20%;
+	transform: translate(-40%);
+}
+
+.saturday-seminars {
+	top: 7em;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+.sunday-seminars {
+	top: 7em;
+	left: 80%;
+	transform: translate(-40%);
+}
+
+input+label+div {
+	overflow: hidden;
+	visibility: hidden;
+	max-height: 0;
+	transition: all 0.6s ease;
+}
+
+input {
+	display: none;
+}
+
+input:checked+label {
+	font-weight: bold;
+	border-bottom: 2px solid var(--text-color-dark);
+}
+
+input:checked+label+div {
+	max-height: 100vh;
+	visibility: visible;
+	opacity: 1;
+}
+
+input:checked+label+div * {
+	opacity: 1;
+}
+
+.seminar-card {
+	max-width: 25em;
+	min-height: 25em;
+	max-height: 25em;
+	background-color: var(--text-container-background);
+	box-shadow: 0 10px 20px -8px var(--text-color-dark);
+	border-radius: 1em;
+	padding: 1em;
+	margin: 1em 0;
+	/* text-align: center; */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.seminar-card>div {
+	height: 150px;
+	width: 100%;
+	object-fit: cover;
+	text-align: center;
+}
+
+.seminar-card>div>img {
+	height: 150px;
+	width: 150px;
+}
+
+.seminar-card>.seminar-description>h5 {
+	font-size: 1.2em;
+	margin: 0.5em 0;
+	text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+	.seminar-slides>label {
+		font-size: 1.3em;
+	}
+
+	.friday-seminars {
+		left: 30%;
+		transform: translate(-70%);
+	}
+
+	.saturday-seminars {
+		left: 50%;
+		transform: translate(-50%);
+	}
+
+	.sunday-seminars {
+		left: 70%;
+		transform: translate(-30%);
+	}
+
+	.seminar-card {
+		padding: 1em;
+		margin: 1em 1em;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.seminar-slides>label:hover {
+		font-weight: bold;
+	}
+}
