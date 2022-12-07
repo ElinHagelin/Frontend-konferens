@@ -55,21 +55,42 @@ form input {
 
 }
 
-form label>span {
+/* form input:invalid {
+	border: 1px solid red;
+
+} */
+
+.required {
+	margin-left: 0.2em;
+	color: red;
+}
+
+form label>.price {
 	margin-left: 1em;
 	font-weight: bold;
 }
 
+.name,
 .zip-and-city {
 	display: flex;
 	justify-content: space-between;
 	gap: 1em;
+	flex-wrap: wrap;
 }
 
+.name>span,
 .zip-and-city>span {
 	display: flex;
 	flex-direction: column;
+}
 
+#zip-code {
+	/* max-width: 8em; */
+	flex-grow: 1;
+}
+
+#city {
+	flex-grow: 2;
 }
 
 .buy-pass,
@@ -95,7 +116,7 @@ form label>span {
 .next-button,
 .payment-button {
 	background-color: var(--background-blue);
-	color: var(--button-color-light);
+	color: var(--text-color-light);
 	box-shadow: 0 10px 20px -8px var(--text-color-dark);
 	border-style: none;
 	padding: 1em 2em;

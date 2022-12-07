@@ -150,3 +150,21 @@ input:checked+label+div * {
 		font-weight: bold;
 	}
 }
+
+@media screen and (min-width: 1400px) {
+	.seminar-slides {
+		padding-top: 8em;
+	}
+
+	.friday-seminars {
+		top: 9em;
+	}
+
+	.saturday-seminars {
+		top: 9em;
+	}
+
+	.sunday-seminars {
+		top: 9em;
+	}
+}

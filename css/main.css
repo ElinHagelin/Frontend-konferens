@@ -151,6 +151,10 @@ main {
 		margin-right: 2em;
 	}
 
+	.sign-up-bottom {
+		margin: 5em 0;
+	}
+
 	.sign-up-bottom>h6 {
 		font-size: 1.5em;
 	}
@@ -222,6 +226,10 @@ main {
 	.what {
 		max-width: 25em;
 		justify-self: flex-end;
+	}
+
+	.sign-up-bottom {
+		margin: 8em 0;
 	}
 
 }

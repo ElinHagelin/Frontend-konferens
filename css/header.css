@@ -49,6 +49,7 @@ header {
 	/* margin: 1em 0; */
 	padding: 0.5em 1em;
 	background-color: var(--button-color-light);
+	/* border: 2px solid var(--button-border-coral); */
 	box-shadow: 0 10px 20px -8px var(--text-color-dark);
 	border-radius: 2em;
 	text-decoration: none;
@@ -114,7 +115,7 @@ header {
 
 	.header>.hero>h2,
 	.header>.hero>span>h3 {
-		color: var(--button-color-light);
+		color: var(--text-color-light);
 	}
 
 	.header>.hero>span {
@@ -167,4 +168,10 @@ header {
 		padding: 0.5em 1em;
 	}
 
+	.header>.hero>.top-button:hover,
+	.header>.hero>.top-button:focus {
+		box-shadow: inset 0 0 0 2em var(--button-border-coral);
+		transition: 0.25s;
+		color: var(--text-color-light);
+	}
 }
