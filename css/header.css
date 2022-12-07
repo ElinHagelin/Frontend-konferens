@@ -1,10 +1,7 @@
-header {
+.header {
 	height: 100vh;
-}
-
-.header>.hero {
 	width: 100%;
-	height: 100%;
+	/* height: 100%; */
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 3fr 1fr 1fr 2fr 2fr;
@@ -16,34 +13,34 @@ header {
 		"sign-up";
 }
 
-.header>.hero>h1,
-.header>.hero>h2,
-.header>.hero>span>h3 {
+.header__h1,
+.header__h2,
+.header__h3 {
 	font-size: 2em;
 	color: var(--text-color-dark);
 	text-align: center;
 }
 
-.header>.hero>h1 {
+.header__h1 {
 	grid-area: h1;
 	align-self: flex-end;
 }
 
-.header>.hero>h2 {
+.header__h2 {
 	grid-area: h2;
 	align-self: center;
 }
 
-.header>.hero>span {
+.header__span {
 	grid-area: h3;
 
 }
 
-.header>.hero>span>h3 {
+.header__h3 {
 	font-size: 1.2em;
 }
 
-.header>.hero>.top-button {
+.header__button {
 	/* margin-bottom: 3em; */
 	font-size: 1.2em;
 	/* margin: 1em 0; */
@@ -60,18 +57,18 @@ header {
 	max-height: 2.5em;
 }
 
-.header>.hero>.top-button:focus {
+.header__button:focus {
 	box-shadow: inset 0 0 0 2em var(--button-border-coral);
 	transition: 0.25s;
 	color: var(--text-color-light);
 }
 
-.header>.hero>.seminars {
+.header__button--left {
 	grid-area: seminars;
 	align-self: center;
 }
 
-.header>.hero>.sign-up {
+.header__button--right {
 	grid-area: sign-up;
 	align-self: start;
 }
@@ -79,20 +76,18 @@ header {
 
 @media screen and (min-width: 350px) and (max-width: 599px) {
 
-	.header>.hero>h1,
-	.header>.hero>h2 {
+	.header__h1,
+	.header__h2 {
 		font-size: 3em;
 	}
 
-	.header>.hero>span>h3 {
+	.header__h3 {
 		font-size: 1.4em;
 	}
 }
 
 @media screen and (min-width: 600px) {
-	.header>.hero {
-		width: 100%;
-		height: 100%;
+	.header {
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 2fr 1fr 1fr 1fr;
 		grid-template-areas:
@@ -102,50 +97,50 @@ header {
 			"seminars sign-up";
 	}
 
-	.header>.hero>h1 {
+	.header__h1 {
 		font-size: 3em;
 		margin-bottom: 1em;
 		grid-column: 1;
 		align-self: flex-start;
 	}
 
-	.header>.hero>h2 {
+	.header__h2 {
 		font-size: 3em;
 		align-self: center;
 	}
 
-	.header>.hero>h2,
-	.header>.hero>span {
+	.header__h2,
+	.header__span {
 		grid-column: 2;
 	}
 
-	.header>.hero>h2,
-	.header>.hero>span>h3 {
+	.header__h2,
+	.header__h3 {
 		color: var(--text-color-light);
 	}
 
-	.header>.hero>span {
+	.header__span {
 		display: flex;
 		gap: 1em;
 		justify-self: center;
 		align-self: flex-start;
 	}
 
-	.header>.hero>span>h3 {
+	.header__h3 {
 		font-size: 1.2em;
 	}
 
-	.header>.hero>.top-button {
+	.header__button {
 		margin: 0 2em;
 	}
 
-	.header>.hero>.seminars {
+	.header__button--left {
 		grid-column: 1;
 		align-self: flex-start;
 		justify-self: flex-end;
 	}
 
-	.header>.hero>.sign-up {
+	.header__button--right {
 		grid-column: 2;
 		align-self: flex-start;
 		justify-self: flex-start;
@@ -154,29 +149,29 @@ header {
 
 @media screen and (min-width: 900px) {
 
-	.header>.hero>h1,
-	.header>.hero>h2 {
+	.header__h1,
+	.header__h2 {
 		font-size: 4em;
 	}
 
-	.header>.hero>span>h3 {
+	.header__h3 {
 		font-size: 2em;
 	}
 
-	.header>.hero>span {
+	.header__span {
 		display: flex;
 		gap: 1em;
 		justify-self: center;
 	}
 
-	.header>.hero>.top-button {
+	.header__button {
 		font-size: 1.4em;
 		padding: 0.5em 1em;
 	}
 }
 
 @media screen and (min-width: 1200px) {
-	.header>.hero>.top-button:hover {
+	.header__button:hover {
 		box-shadow: inset 0 0 0 2em var(--button-border-coral);
 		transition: 0.5s;
 		color: var(--text-color-light);

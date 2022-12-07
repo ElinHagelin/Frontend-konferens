@@ -14,190 +14,212 @@
 
 <body>
 	<header class="header">
-		<div class="hero">
-			<h1>Bättre Webb</h1>
-			<h2>Konferens</h2>
-			<span>
-				<h3>9 - 11 december</h3>
-				<h3>Karlstad CCC</h3>
-			</span>
-			<a href="#seminars" class="top-button seminars">Seminarier</a>
-			<a href="/registration-step1.html" class="top-button sign-up">Anmäl mig</a>
 
-		</div>
+		<h1 class="header__h1">Bättre Webb</h1>
+		<h2 class="header__h2">Konferens</h2>
+		<span class="header__span">
+			<h3 class="header__h3">9 - 11 december</h3>
+			<h3 class="header__h3">Karlstad CCC</h3>
+		</span>
+
+		<a href="#seminars" class="header__button header__button--left">Seminarier</a>
+		<a href="/registration-step1.html" class="header__button header__button--right">Anmäl mig</a>
+
 	</header>
 
-	<main>
+	<main class="main">
 
-		<h3 class="main-heading">Äntligen dags för årets Bättre Webb konferens!</h3>
+		<h3 class="main__heading">Äntligen dags för årets Bättre Webb konferens!</h3>
 
-		<section class="information-container what">
-			<h4>Vad är Bättre Webb?</h4>
-			<p>Bättre Webb är en årligt återkommande konferens för frontendutvecklare.
+		<section class="information-container information-container--what">
+			<h4 class="information-container__heading">Vad är Bättre Webb?</h4>
+			<p class="information-container__description">Bättre Webb är en årligt återkommande konferens för
+				frontendutvecklare.
 				Den första konferensen hölls 2014 i Linköping med 22 deltagare. Sen dess har vi växt och lockade år
 				2021 hela 85 deltagare.</p>
-
-			<p>Och äntligen kan vi återigen ses in person så att säga. Tillräckligt mycket av vårt arbete sker
+			<p class="information-container__description">Och äntligen kan vi återigen ses in person så att säga.
+				Tillräckligt mycket av vårt arbete sker
 				digitalt så det kan vara trevligt att mötas ansikte mot ansikte ibland. </p>
 		</section>
-		<section class="information-container where">
-			<h4>Var?</h4>
 
-			<p>Vi kommer att hålla till på fantastiska Karlstad CCC där vi inte nog med våra härliga seminarier även
+		<section class="information-container information-container--where">
+			<h4 class="information-container__heading">Var?</h4>
+
+			<p class="information-container__description">Vi kommer att hålla till på fantastiska Karlstad CCC där vi
+				inte nog med våra härliga seminarier även
 				kommer kunna njuta av en av karlstads vackraste utsikter över klarälven.</p>
 
-			<p>I anslutning till konferens-centret ligger First Hotel River C med samma vackra utsikt plus en
+			<p class="information-container__description">I anslutning till konferens-centret ligger First Hotel River C
+				med samma vackra utsikt plus en
 				frukost i världsklass.</p>
 		</section>
-		<section class="information-container when">
-			<h4>När?</h4>
 
-			<p>Årets upplaga av konferensen äger rum den 9-11 december.</p>
+		<section class="information-container information-container--when">
+			<h4 class="information-container__heading">När?</h4>
 
-			<p>I dagarna tre ska vi förkovra oss bland annat i hur vi kan locka fram kreativiteten när huvudet är
+			<p class="information-container__description">Årets upplaga av konferensen äger rum den 9-11 december.</p>
+
+			<p class="information-container__description">I dagarna tre ska vi förkovra oss bland annat i hur vi kan
+				locka fram kreativiteten när huvudet är
 				blankt, hur vi kan förbättra våra samarbets-skills och vad som är nytt på frontend-horisonten.</p>
 		</section>
 
-		<div class="seminar-slider">
-			<h4 id="seminars">Seminarier</h4>
+		<div class="seminar-container">
+			<h4 id="seminar-heading">Seminarier</h4>
 
-			<div class="seminar-slides">
-				<input id="friday" type="radio" name="seminar-days" checked />
-				<label for="friday" class="friday-seminars">Fredag</label>
-				<div id="cards-friday">
-					<div class="seminar-card">
-						<div><img src="/images/krakenimages-Y5bvRlcCx8k-unsplash.jpg" alt="Teamwork">
-						</div>
-						<section class="seminar-description">
-							<h5>Hur maxar vi vårt Team?</h5>
-							<p>Det här med att arbeta i team är den bästa arbetsformen enligt oss, men det är inte
+			<div class="toggle">
+				<input class="toggle__input" id="friday" type="radio" name="seminar-days" checked />
+				<label class="toggle__label toggle__label--friday" for="friday">Fredag</label>
+				<div class="card-container card-container--friday">
+					<div class="card">
+						<img class="card__image" src="/images/krakenimages-Y5bvRlcCx8k-unsplash.jpg" alt="Teamwork">
+
+						<section class="card__text-section">
+							<h5 class="card__heading">Hur maxar vi vårt Team?</h5>
+							<p class="card__description">Det här med att arbeta i team är den bästa arbetsformen enligt
+								oss, men det är inte
 								alltid
 								helt lätt. Här får du tips på hur du maxar ditt team, både i kommunikation och
 								effektivitet.
 							</p>
 						</section>
-						<section class="time-and-place">
-							<p class="time"><strong>Tid: 10.00 -11.30</strong></p>
-							<p class="place"><strong>Plats: </strong></p>
+						<section class="card__time-and-place">
+							<p class="card__time"><strong>Tid: 10.00 -11.30</strong></p>
+							<p class="card__place"><strong>Plats: </strong></p>
 						</section>
 					</div>
-					<div class="seminar-card">
-						<div><img src="/images/yomex-owo-gRTzhQsiVG0-unsplash.jpg" alt="Tillgänglighet för alla">
-						</div>
-						<section class="seminar-description">
-							<h5>Fokus på tillgänglighet</h5>
-							<p>Tillgänglighet blir allt viktigare när nya hjälpmedel får fler att kunna använda och
+					<div class="card">
+						<img class="card__image" src="/images/yomex-owo-gRTzhQsiVG0-unsplash.jpg"
+							alt="Tillgänglighet för alla">
+
+						<section class="card__text-section">
+							<h5 class="card__heading">Fokus på tillgänglighet</h5>
+							<p class="card__description">Tillgänglighet blir allt viktigare när nya hjälpmedel får fler
+								att kunna använda och
 								interagera med webben. Hur gör vi det lätt för alla att använda webben oavsett sina
 								förutsättningar?</p>
 						</section>
-						<section class="time-and-place">
-							<p class="time"><strong>Tid: 12.30 - 14.45</strong></p>
-							<p class="place"><strong>Plats: </strong></p>
+						<section class="card__time-and-place">
+							<p class="card__time"><strong>Tid: 12.30 - 14.45</strong></p>
+							<p class="card__place"><strong>Plats: </strong></p>
 						</section>
 					</div>
-					<div class="seminar-card">
-						<div><img src="/images/nicole-wolf-NdFREMS5P08-unsplash.jpg" alt="Bli ditt eget varumärke">
-						</div>
-						<section class="seminar-description">
-							<h5>Bli ditt eget varumärke</h5>
-							<p>En beskrivning av vad seminariet kommer handla om och information om tid och plats</p>
+					<div class="card">
+						<img class="card__image" src="/images/nicole-wolf-NdFREMS5P08-unsplash.jpg"
+							alt="Bli ditt eget varumärke">
+
+						<section class="card__text-section">
+							<h5 class="card__heading">Bli ditt eget varumärke</h5>
+							<p class="card__description">En beskrivning av vad seminariet kommer handla om och
+								information om tid och plats</p>
 						</section>
-						<section class="time-and-place">
-							<p class="time"><strong>Tid: 15.15 - 16.00</strong></p>
-							<p class="place"><strong>Plats: </strong></p>
+						<section class="card__time-and-place">
+							<p class="card__time"><strong>Tid: 15.15 - 16.00</strong></p>
+							<p class="card__place"><strong>Plats: </strong></p>
 						</section>
 					</div>
 				</div>
-				<input id="saturday" type="radio" name="seminar-days" />
-				<label for="saturday" class="saturday-seminars">Lördag</a>
+				<input class="toggle__input" id="saturday" type="radio" name="seminar-days" />
+				<label class="toggle__label toggle__label--saturday" for="saturday">Lördag</a>
 				</label>
-				<div id="cards-saturday">
-					<div class="seminar-card">
-						<img src="/images/greg-rakozy-vw3Ahg4x1tY-unsplash.jpg" alt="Css eller JavaScript">
-						<section class="seminar-description">
-							<h5>CSS och JavaScript, när ska jag använda vad?</h5>
-							<p>En beskrivning av vad seminariet kommer handla om och information om tid och plats</p>
+				<div class="card-container card-container--saturday">
+					<div class="card">
+						<img class="card__image" src="/images/greg-rakozy-vw3Ahg4x1tY-unsplash.jpg"
+							alt="Css eller JavaScript">
+						<section class="card__text-section">
+							<h5 class="card__heading">CSS och JavaScript, när ska jag använda vad?</h5>
+							<p class="card__description">En beskrivning av vad seminariet kommer handla om och
+								information om tid och plats</p>
 						</section>
-						<section class="time-and-place">
-							<p class="time"><strong>Tid: 9.30 - 10.45</strong></p>
-							<p class="place"><strong>Plats: </strong></p>
-						</section>
-						</section>
-					</div>
-					<div class="seminar-card">
-						<img src="/images/taras-shypka-iFSvn82XfGo-unsplash.jpg" alt="Att göra sin design responsiv">
-						<section class="seminar-description">
-							<h5>Container querys och responsiv design</h5>
-							<p>En beskrivning av vad seminariet kommer handla om och information om tid och plats</p>
-						</section>
-						<section class="time-and-place">
-							<p class="time"><strong>Tid: 11.00 - 12.00</strong></p>
-							<p class="place"><strong>Plats: </strong></p>
+						<section class="card__time-and-place">
+							<p class="card__time"><strong>Tid: 9.30 - 10.45</strong></p>
+							<p class="card__place"><strong>Plats: </strong></p>
 						</section>
 						</section>
 					</div>
-					<div class="seminar-card">
-						<img src="/images/lauren-mancke-aOC7TSLb1o8-unsplash.jpg"
+					<div class="card">
+						<img class="card__image" src="/images/taras-shypka-iFSvn82XfGo-unsplash.jpg"
+							alt="Att göra sin design responsiv">
+						<section class="card__text-section">
+							<h5 class="card__heading">Container querys och responsiv design</h5>
+							<p class="card__description">En beskrivning av vad seminariet kommer handla om och
+								information om tid och plats</p>
+						</section>
+						<section class="card__time-and-place">
+							<p class="card__time"><strong>Tid: 11.00 - 12.00</strong></p>
+							<p class="card__place"><strong>Plats: </strong></p>
+						</section>
+						</section>
+					</div>
+					<div class="card">
+						<img class="card__image" src="/images/lauren-mancke-aOC7TSLb1o8-unsplash.jpg"
 							alt="Hur lockar jag fram kreativiteten?">
-						<section class="seminar-description">
-							<h5>Kreativt tänkande</h5>
-							<p>En beskrivning av vad seminariet kommer handla om och information om tid och plats</p>
+						<section class="card__text-section">
+							<h5 class="card__heading">Kreativt tänkande</h5>
+							<p class="card__description">En beskrivning av vad seminariet kommer handla om och
+								information om tid och plats</p>
 						</section>
-						<section class="time-and-place">
-							<p class="time"><strong>Tid: 13.00 - 14.30</strong></p>
-							<p class="place"><strong>Plats: </strong></p>
+						<section class="card__time-and-place">
+							<p class="card__time"><strong>Tid: 13.00 - 14.30</strong></p>
+							<p class="card__place"><strong>Plats: </strong></p>
 						</section>
 						</section>
 					</div>
-					<div class="seminar-card">
-						<img src="/images/cleaning-computer.jpeg" alt="Städa upp i din kod">
-						<section class="seminar-description">
-							<h5>Clean code</h5>
-							<p>En beskrivning av vad seminariet kommer handla om och information om tid och plats</p>
+					<div class="card">
+						<img class="card__image" src="/images/cleaning-computer.jpeg" alt="Städa upp i din kod">
+						<section class="card__text-section">
+							<h5 class="card__heading">Clean code</h5>
+							<p class="card__description">En beskrivning av vad seminariet kommer handla om och
+								information om tid och plats</p>
 						</section>
-						<section class="time-and-place">
-							<p class="time"><strong>Tid: 15.00 - 16.00</strong></p>
-							<p class="place"><strong>Plats: </strong></p>
+						<section class="card__time-and-place">
+							<p class="card__time"><strong>Tid: 15.00 - 16.00</strong></p>
+							<p class="card__place"><strong>Plats: </strong></p>
 						</section>
 						</section>
 					</div>
 				</div>
-				<input id="sunday" type="radio" name="seminar-days" />
-				<label for="sunday" class="sunday-seminars">Söndag</a></label>
-				<div id="cards-sunday">
-					<div class="seminar-card">
-						<img src="/images/Debugging-Tips-To-Get-Better-At-It.png" alt="Förbättra dina debugging skills">
-						<section class="seminar-description">
-							<h5>Bli ett debugging genius</h5>
-							<p>En beskrivning av vad seminariet kommer handla om och information om tid och plats</p>
+				<input class="toggle__input" id="sunday" type="radio" name="seminar-days" />
+				<label class="toggle__label toggle__label--sunday" for="sunday">Söndag</a></label>
+				<div class="card-container card-container--sunday">
+					<div class="card">
+						<img class="card__image" src="/images/Debugging-Tips-To-Get-Better-At-It.png"
+							alt="Förbättra dina debugging skills">
+						<section class="card__text-section">
+							<h5 class="card__heading">Bli ett debugging genius</h5>
+							<p class="card__description">En beskrivning av vad seminariet kommer handla om och
+								information om tid och plats</p>
 						</section>
-						<section class="time-and-place">
-							<p class="time"><strong>Tid: 9.30 - 10.45</strong></p>
-							<p class="place"><strong>Plats: </strong></p>
-						</section>
-						</section>
-					</div>
-					<div class="seminar-card">
-						<img src="/images/web-security.png" alt="Skydda dina program på bästa sätt">
-						<section class="seminar-description">
-							<h5>Websäkerhet</h5>
-							<p>En beskrivning av vad seminariet kommer handla om och information om tid och plats</p>
-						</section>
-						<section class="time-and-place">
-							<p class="time"><strong>Tid: 11.00 - 12.00</strong></p>
-							<p class="place"><strong>Plats: </strong></p>
+						<section class="card__time-and-place">
+							<p class="card__time"><strong>Tid: 9.30 - 10.45</strong></p>
+							<p class="card__place"><strong>Plats: </strong></p>
 						</section>
 						</section>
 					</div>
-					<div class="seminar-card">
-						<img src="/images/christian-wiediger-70ku6P7kgmc-unsplash.jpg" alt="appar i en telefon">
-						<section class="seminar-description">
-							<h5>Apputveckling</h5>
-							<p>En beskrivning av vad seminariet kommer handla om och information om tid och plats</p>
+					<div class="card">
+						<img class="card__image" src="/images/web-security.png" alt="Skydda dina program på bästa sätt">
+						<section class="card__text-section">
+							<h5 class="card__heading">Websäkerhet</h5>
+							<p class="card__description">En beskrivning av vad seminariet kommer handla om och
+								information om tid och plats</p>
 						</section>
-						<section class="time-and-place">
-							<p class="time"><strong>Tid: 13.00 - 14.30</strong></p>
-							<p class="place"><strong>Plats: </strong></p>
+						<section class="card__time-and-place">
+							<p class="card__time"><strong>Tid: 11.00 - 12.00</strong></p>
+							<p class="card__place"><strong>Plats: </strong></p>
+						</section>
+						</section>
+					</div>
+					<div class="card">
+						<img class="card__image" src="/images/christian-wiediger-70ku6P7kgmc-unsplash.jpg"
+							alt="appar i en telefon">
+						<section class="card__text-section">
+							<h5 class="card__heading">Apputveckling</h5>
+							<p class="card__description">En beskrivning av vad seminariet kommer handla om och
+								information om tid och plats</p>
+						</section>
+						<section class="card__time-and-place">
+							<p class="card__time"><strong>Tid: 13.00 - 14.30</strong></p>
+							<p class="card__place"><strong>Plats: </strong></p>
 						</section>
 						</section>
 					</div>

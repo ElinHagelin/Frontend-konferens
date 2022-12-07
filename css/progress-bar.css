@@ -1,4 +1,4 @@
-.stepper-wrapper {
+.stepper {
 	margin-top: auto;
 	display: flex;
 	justify-content: space-between;
@@ -6,7 +6,7 @@
 	min-width: 20em;
 }
 
-.stepper-item {
+.stepper__item {
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -19,7 +19,7 @@
 	} */
 }
 
-.stepper-item::before {
+.stepper__item::before {
 	position: absolute;
 	content: "";
 	border-bottom: 2px solid var(--progress-bar-background);
@@ -29,7 +29,7 @@
 	z-index: 2;
 }
 
-.stepper-item::after {
+.stepper__item::after {
 	position: absolute;
 	content: "";
 	border-bottom: 2px solid var(--progress-bar-background);
@@ -39,7 +39,7 @@
 	z-index: 2;
 }
 
-.stepper-item .step-counter {
+.stepper__counter {
 	position: relative;
 	z-index: 5;
 	display: flex;
@@ -52,26 +52,26 @@
 	/* margin-bottom: 6px; */
 }
 
-.stepper-item.active {
+.stepper__item--active {
 	font-weight: bold;
 	font-size: 1.3em;
 	margin-top: 0;
 }
 
-.stepper-item.active .step-counter {
+.stepper__item--active .stepper__counter {
 	width: 50px;
 	height: 50px;
 
 
 }
 
-.stepper-item.completed .step-counter {
+.stepper__item--completed .stepper__counter {
 	background-color: var(--background-blue);
 	background-image: url(/images/check-icon.png);
 	background-size: cover;
 }
 
-.stepper-item.completed::after {
+.stepper__item--completed::after {
 	position: absolute;
 	content: "";
 	border-bottom: 2px solid var(--background-blue);
@@ -81,10 +81,10 @@
 	z-index: 3;
 }
 
-.stepper-item:first-child::before {
+.stepper__item:first-child::before {
 	content: none;
 }
 
-.stepper-item:last-child::after {
+.stepper__item:last-child::after {
 	content: none;
 }

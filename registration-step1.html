@@ -12,72 +12,85 @@
 </head>
 
 <body>
-	<h1>Anmälan till Bättre Webb Konferens 9 - 11 december 2022</h1>
+	<main class="main">
+		<h1 class="main__heading">Anmälan till Bättre Webb Konferens 9 - 11 december 2022</h1>
 
-	<div class="stepper-wrapper">
-		<div class="stepper-item active">
-			<div class="step-counter">1</div>
+		<div class="stepper">
+			<div class="stepper__item stepper__item--active">
+				<div class="stepper__counter">1</div>
+			</div>
+			<div class="stepper__item">
+				<div class="stepper__counter">2</div>
+			</div>
+			<div class="stepper__item">
+				<div class="stepper__counter">3</div>
+			</div>
+			<div class="stepper__item">
+				<div class="stepper__counter">4</div>
+			</div>
 		</div>
-		<div class="stepper-item">
-			<div class="step-counter">2</div>
-		</div>
-		<div class="stepper-item">
-			<div class="step-counter">3</div>
-		</div>
-		<div class="stepper-item">
-			<div class="step-counter">4</div>
-		</div>
-	</div>
 
-	<form action="/registration-step2.html">
-		<div class="name">
-			<span>
-				<label for="first-name">Förnamn<span class="required">*</span></label>
-				<input title="Fyll i ditt förnamn" type="text" id="first-name" required>
+		<form class="form" action="/registration-step2.html">
+			<div class="form__name">
+				<span class="form__group">
+					<label class="form__label form__label--input" for="first-name">Förnamn<span
+							class="form__required-star">*</span></label>
+					<input class="form__input" title="Fyll i ditt förnamn" type="text" id="first-name"
+						placeholder="Förnamn" required>
+				</span>
+				<span class="form__group">
+					<label class="form__label form__label--input" for="surname">Efternamn<span
+							class="form__required-star">*</span></label>
+					<input class="form__input" title="Fyll i ditt efternamn" type="text" id="surname"
+						placeholder="Efternamn" required>
+				</span>
+			</div>
+			<label class="form__label form__label--input" for="adress">Adress</label>
+			<input class="form__input" title="Fyll i din adress" type="text" id="adress" placeholder="Adress">
+			<div class="form__zip-and-city">
+				<span class="form__group">
+					<label class="form__label form__label--input" for="zip-code">Postnummer</label>
+					<input class="form__input form__input--zip" title="Ange ett postnummer med 5 siffror" type="text"
+						placeholder="Postnummer" id="zip-code" pattern="[0-9]{5}">
+				</span>
+				<span class="form__group">
+					<label class="form__label form__label--input" for="city">Stad/ort</label>
+					<input class="form__input form__input--city" title="Ange en stad/ort" type="text" id="city"
+						placeholder="Stad/ort">
+				</span>
+			</div>
+			<label class="form__label form__label--input" for="email">E-post<span
+					class="form__required-star">*</span></label>
+			<input class="form__input" title="Fyll i en giltig e-postadress ex. bättrewebb@gmail.com" type="text"
+				id="e-mail" placeholder="bättrewebb@gmail.com" pattern="[A-Öa-ö0-9._+-]+@[A-Öa-ö0-9 -]+\.[a-z]{2,}"
+				required>
+
+			<p class="form__buy-pass">Jag vill köpa pass för:</p>
+			<span class="form__radio">
+				<input class="form__input form__input--radio" type="radio" name="day-pass" id="all-days" checked>
+				<label class="form__label form__label--radio" for="all-days">Alla dagar <span
+						class="form__price">1500:-</span></label>
 			</span>
-			<span>
-				<label for="surname">Efternamn<span class="required">*</span></label>
-				<input title="Fyll i ditt efternamn" type="text" id="surname" required>
+			<span class="form__radio">
+				<input class="form__input form__input--radio" type="radio" name="day-pass" id="friday">
+				<label class="form__label form__label--radio" for="friday">Fredag<span
+						class="form__price">600:-</span></label>
 			</span>
-		</div>
-		<label for="adress">Adress</label>
-		<input title="Fyll i din adress" type="text" id="adress">
-		<div class="zip-and-city">
-			<span>
-				<label for="zip-code">Postnummer</label>
-				<input title="Ange ett postnummer med 5 siffror" type="text" id="zip-code" pattern="[0-9]{5}">
+			<span class="form__radio">
+				<input class="form__input form__input--radio" type="radio" name="day-pass" id="saturday">
+				<label class="form__label form__label--radio" for="saturday">Lördag<span
+						class="form__price">700:-</span></label>
 			</span>
-			<span>
-				<label for="city">Stad/ort</label>
-				<input title="Ange en stad/ort" type="text" id="city">
+			<span class="form__radio">
+				<input class="form__input form__input--radio" type="radio" name="day-pass" id="sunday">
+				<label class="form__label form__label--radio" for="sunday">Söndag<span
+						class="form__price">600:-</span></label>
 			</span>
-		</div>
-		<label for="email">E-post<span class="required">*</span></label>
-		<input title="Fyll i en giltig e-postadress" type="text" id="e-mail"
-			pattern="[A-Öa-ö0-9._+-]+@[A-Öa-ö0-9 -]+\.[a-z]{2,}" required>
 
-		<p class="buy-pass">Jag vill köpa pass för:</p>
-		<span class="radio-button">
-			<input type="radio" name="day-pass" id="all-days" checked>
-			<label for="all-days">Alla dagar <span class="price">1500:-</span></label>
-		</span>
-		<span class="radio-button">
-			<input type="radio" name="day-pass" id="friday">
-			<label for="friday">Fredag<span class="price">600:-</span></label>
-		</span>
-		<span class="radio-button">
-			<input type="radio" name="day-pass" id="saturday">
-			<label for="saturday">Lördag<span class="price">700:-</span></label>
-		</span>
-		<span class="radio-button">
-			<input type="radio" name="day-pass" id="sunday">
-			<label for="sunday">Söndag<span class="price">600:-</span></label>
-		</span>
+			<button class="form__button">Nästa</button>
 
-		<button class="next-button">Nästa</button>
-
-
-	</form>
+		</form>
+	</main>
 </body>
 
 </html>
