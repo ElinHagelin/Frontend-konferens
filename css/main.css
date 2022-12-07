@@ -11,6 +11,7 @@ body {
 	position: relative;
 	background-attachment: fixed;
 	color: var(--text-color-dark);
+
 }
 
 main {
@@ -24,7 +25,8 @@ main {
 		"when"
 		"seminar-slider";
 	/* "sign-up-bottom"; */
-	gap: 2em
+	gap: 2em;
+
 }
 
 .main-heading {
@@ -111,6 +113,12 @@ main {
 	border-radius: 2em;
 }
 
+.sign-up-bottom>a:focus {
+	box-shadow: inset 0 0 0 2em var(--button-border-coral);
+	transition: 0.25s;
+	color: var(--text-color-light);
+}
+
 
 @media screen and (min-width: 800px) {
 	main {
@@ -165,19 +173,13 @@ main {
 }
 
 
-@media screen and (min-width: 881px) {
-	main {
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 7em 11em 14em minmax(60em 95em);
-		grid-template-areas:
-			"main-heading main-heading"
-			"what what"
-			"where when"
-			"seminar-slider seminar-slider";
-		/* "sign-up-bottom sign-up-bottom"; */
-		gap: 2em;
-	}
+@media screen and (min-width: 1200px) {
 
+	.sign-up-bottom>a:hover {
+		box-shadow: inset 0 0 0 2em var(--button-border-coral);
+		transition: 0.5s;
+		color: var(--text-color-light);
+	}
 }
 
 @media screen and (min-width: 1410px) {

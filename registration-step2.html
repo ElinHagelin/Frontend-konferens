@@ -48,6 +48,10 @@
 			<input type="radio" name="food-friday" id="vegan-friday">
 			<label for="vegan-friday">Veganskt</label>
 		</span>
+		<span class="radio-button">
+			<input type="radio" name="food-friday" id="no-food-friday" checked>
+			<label for="no-food-friday">Vill ej beställa mat</label>
+		</span>
 
 		<h2 class="saturday">Lördag</h2>
 		<span class="radio-button">
@@ -66,6 +70,10 @@
 		<span class="radio-button">
 			<input type="radio" name="food-saturday" id="vegan-saturday">
 			<label for="vegan-saturday">Veganskt</label>
+		</span>
+		<span class="radio-button">
+			<input type="radio" name="food-saturday" id="no-food-saturday" checked>
+			<label for="no-food-saturday">Vill ej beställa mat</label>
 		</span>
 
 		<h2 class="sunday">Söndag</h2>
@@ -86,8 +94,17 @@
 			<input type="radio" name="food-sunday" id="vegan-sunday">
 			<label for="vegan-sunday">Veganskt</label>
 		</span>
+		<span class="radio-button">
+			<input type="radio" name="food-sunday" id="no-food-sunday" checked>
+			<label for="no-food-sunday">Vill ej beställa mat</label>
+		</span>
 
-		<a class="payment-button">Gå till betalning</a>
+
+		<label for="allergies" class="allergies">Allergier:</label>
+		<input type="textarea" id="allergies">
+
+
+		<button class="payment-button">Gå till betalning</button>
 	</form>
 </body>
 

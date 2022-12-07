@@ -23,8 +23,6 @@ h1 {
 	font-size: 1.1em;
 }
 
-
-
 .friday,
 .saturday,
 .sunday {
@@ -45,6 +43,7 @@ form {
 	display: flex;
 	flex-direction: column;
 	padding: 2em;
+	margin-bottom: 3em;
 }
 
 form input {
@@ -113,6 +112,10 @@ form label>.price {
 	margin-left: 1em;
 }
 
+.allergies {
+	margin-top: 2em;
+}
+
 .next-button,
 .payment-button {
 	background-color: var(--background-blue);
@@ -123,7 +126,7 @@ form label>.price {
 	max-width: 13em;
 	border-radius: 2em;
 	align-self: center;
-	margin-top: 3em;
+	margin-top: 2em;
 	font-size: 1em;
 	text-align: center;
 	cursor: pointer;
@@ -160,10 +163,6 @@ form label>.price {
 	form .radio-button label:hover {
 		font-weight: bold;
 	}
-
-	/* form .radio-button input:checked label {
-		font-weight: bold;
-	} */
 
 	.next-button,
 	.payment-button {

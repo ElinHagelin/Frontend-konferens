@@ -22,13 +22,13 @@
 				<h3>Karlstad CCC</h3>
 			</span>
 			<a href="#seminars" class="top-button seminars">Seminarier</a>
-			<a href="" class="top-button sign-up">Anmäl mig</a>
+			<a href="/registration-step1.html" class="top-button sign-up">Anmäl mig</a>
 
 		</div>
 	</header>
 
 	<main>
-		<!-- <section class="information-container"> -->
+
 		<h3 class="main-heading">Äntligen dags för årets Bättre Webb konferens!</h3>
 
 		<section class="information-container what">
@@ -57,17 +57,15 @@
 			<p>I dagarna tre ska vi förkovra oss bland annat i hur vi kan locka fram kreativiteten när huvudet är
 				blankt, hur vi kan förbättra våra samarbets-skills och vad som är nytt på frontend-horisonten.</p>
 		</section>
-		<!-- </section> -->
 
-		<!-- <section> -->
 		<div class="seminar-slider">
 			<h4 id="seminars">Seminarier</h4>
 
 			<div class="seminar-slides">
-				<input id="s1" type="radio" name="t" checked />
-				<label for="s1" class="friday-seminars">Fredag</label>
+				<input id="friday" type="radio" name="seminar-days" checked />
+				<label for="friday" class="friday-seminars">Fredag</label>
 				<div id="cards-friday">
-					<div class="seminar-card card1">
+					<div class="seminar-card">
 						<div><img src="/images/krakenimages-Y5bvRlcCx8k-unsplash.jpg" alt="Teamwork">
 						</div>
 						<section class="seminar-description">
@@ -83,7 +81,7 @@
 							<p class="place"><strong>Plats: </strong></p>
 						</section>
 					</div>
-					<div class="seminar-card card2">
+					<div class="seminar-card">
 						<div><img src="/images/yomex-owo-gRTzhQsiVG0-unsplash.jpg" alt="Tillgänglighet för alla">
 						</div>
 						<section class="seminar-description">
@@ -97,7 +95,7 @@
 							<p class="place"><strong>Plats: </strong></p>
 						</section>
 					</div>
-					<div class="seminar-card card3">
+					<div class="seminar-card">
 						<div><img src="/images/nicole-wolf-NdFREMS5P08-unsplash.jpg" alt="Bli ditt eget varumärke">
 						</div>
 						<section class="seminar-description">
@@ -110,8 +108,8 @@
 						</section>
 					</div>
 				</div>
-				<input id="s2" type="radio" name="t" />
-				<label for="s2" class="saturday-seminars">Lördag</a>
+				<input id="saturday" type="radio" name="seminar-days" />
+				<label for="saturday" class="saturday-seminars">Lördag</a>
 				</label>
 				<div id="cards-saturday">
 					<div class="seminar-card">
@@ -164,8 +162,8 @@
 						</section>
 					</div>
 				</div>
-				<input id="s3" type="radio" name="t" />
-				<label for="s3" class="sunday-seminars">Söndag</a></label>
+				<input id="sunday" type="radio" name="seminar-days" />
+				<label for="sunday" class="sunday-seminars">Söndag</a></label>
 				<div id="cards-sunday">
 					<div class="seminar-card">
 						<img src="/images/Debugging-Tips-To-Get-Better-At-It.png" alt="Förbättra dina debugging skills">
@@ -207,10 +205,9 @@
 			</div>
 			<div class="sign-up-bottom">
 				<h6>Det låter ju awesome!</h6>
-				<a href="">Sign me up!</a>
+				<a href="/registration-step1.html">Sign me up!</a>
 			</div>
 		</div>
-		<!-- </section> -->
 	</main>
 
 </body>

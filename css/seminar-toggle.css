@@ -18,6 +18,7 @@
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
+	max-width: 100%;
 }
 
 .seminar-slides {
@@ -53,15 +54,22 @@
 	transform: translate(-40%);
 }
 
+input:focus+label {
+	font-weight: bold;
+}
+
 input+label+div {
 	overflow: hidden;
 	visibility: hidden;
 	max-height: 0;
-	transition: all 0.6s ease;
+}
+
+input+label+div * {
+	opacity: 0;
 }
 
 input {
-	display: none;
+	visibility: hidden;
 }
 
 input:checked+label {
@@ -73,10 +81,12 @@ input:checked+label+div {
 	max-height: fit-content;
 	visibility: visible;
 	opacity: 1;
+	transition: all 0.8s ease;
 }
 
 input:checked+label+div * {
 	opacity: 1;
+	transition: all 0.8s ease;
 }
 
 .seminar-card {
@@ -101,6 +111,12 @@ input:checked+label+div * {
 	object-fit: cover;
 	text-align: center;
 }
+
+/* .seminar-card>img {
+	height: 150px;
+	width: 100%;
+	text-align: center;
+} */
 
 .seminar-card>div>img {
 	height: 150px;
