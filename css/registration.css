@@ -31,14 +31,6 @@ body {
 	margin-bottom: 3em;
 }
 
-.form__day {
-	font-size: 1.1em;
-}
-
-.form__day--margin {
-	margin-top: 1.5em;
-}
-
 .form__input {
 	margin-bottom: 1em;
 	border: 1px solid var(--input-border-color);
@@ -64,23 +56,12 @@ body {
 .form__zip-and-city {
 	display: flex;
 	flex-direction: column;
-	/* justify-content: space-between; */
-	/* gap: 1em; */
-	/* flex-wrap: wrap; */
 }
 
 .form__group {
 	display: flex;
 	flex-direction: column;
 }
-
-/* .form__input--zip {
-	flex-grow: 1;
-}
-
-.form__input--city {
-	flex-grow: 2;
-} */
 
 .form__buy-pass {
 	margin: 2em 0 1em 0;
@@ -100,23 +81,14 @@ body {
 	display: flex;
 	align-items: flex-start;
 	margin-top: 1.5em;
-
 }
 
 .form__buy-section--one {
 	flex-direction: column;
 }
 
-.form__choice--one {
-	margin-bottom: 1em;
+.form__choice {
 	display: flex;
-	align-items: center;
-	margin: 0.25em 0;
-}
-
-.form__buy-choice {
-	display: flex;
-	align-items: center;
 	margin: 0.25em 0;
 }
 
@@ -131,20 +103,8 @@ body {
 	margin-left: 1em;
 }
 
-/* .form__day-section {
-	visibility: hidden;
-} */
-
-.form__input--one:checked+.form__day-section {
-	visibility: visible;
-}
-
 .form__allergies {
 	margin-top: 2em;
-}
-
-.form__radio {
-	margin: 0.4em 0;
 }
 
 .form__button {
@@ -162,6 +122,17 @@ body {
 	cursor: pointer;
 }
 
+.form__radio {
+	margin: 0.4em 0;
+}
+
+.form__day {
+	font-size: 1.1em;
+}
+
+.form__day--margin {
+	margin-top: 1.5em;
+}
 
 @media screen and (min-width: 500px) {
 	.main__heading {

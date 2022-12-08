@@ -11,7 +11,6 @@ body {
 	position: relative;
 	background-attachment: fixed;
 	color: var(--text-color-dark);
-
 }
 
 .main {
@@ -24,14 +23,12 @@ body {
 		"where"
 		"when"
 		"seminar-container";
-	/* "sign-up-bottom"; */
 	gap: 2em;
 
 }
 
 .main__heading {
 	grid-area: main-heading;
-	/* margin-top: 3em; */
 	font-size: 1.3em;
 	align-self: center;
 	justify-self: center;
@@ -54,7 +51,6 @@ body {
 
 .information-container__description {
 	text-align: center;
-	/* font-size: 1em; */
 	margin: 0.5em 0;
 }
 
@@ -95,7 +91,7 @@ body {
 	box-shadow: 0 10px 20px -8px var(--text-color-dark);
 	padding: 0.5em 1em;
 	color: var(--text-color-dark);
-	max-width: 7em;
+	max-width: 9em;
 	text-align: center;
 	max-height: 2.5em;
 	border-radius: 2em;
@@ -118,8 +114,6 @@ body {
 			"what what"
 			"where when"
 			"seminar-container seminar-container";
-		/* "sign-up-bottom sign-up-bottom"; */
-		gap: 2em;
 	}
 
 	.main__heading {
@@ -134,7 +128,6 @@ body {
 	.information-container--what {
 		max-width: 52em;
 		margin: 0 2em 0 2em;
-
 	}
 
 	.information-container--where {
@@ -172,19 +165,22 @@ body {
 
 @media screen and (min-width: 1410px) {
 	.main {
-		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-template-rows: 10em 20em minmax(60em 95em);
 		grid-template-areas:
 			"main-heading main-heading main-heading"
 			"what when where"
 			"seminar-container seminar-container seminar-container";
-		gap: 2em;
 	}
 
 	.main__heading {
 		font-size: 2.1em;
 		margin: 2em 0;
+	}
+
+	.information-container {
+		margin: 0;
+		padding: 1.5em;
 	}
 
 	.information-container__heading {
@@ -194,11 +190,6 @@ body {
 
 	.information-container__description {
 		font-size: 1.2em;
-	}
-
-	.information-container {
-		margin: 0;
-		padding: 1.5em;
 	}
 
 	.information-container--when {
@@ -218,5 +209,4 @@ body {
 	.sign-up-bottom {
 		margin: 8em 0;
 	}
-
 }

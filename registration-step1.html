@@ -32,33 +32,38 @@
 
 		<form class="form" action="/registration-step2.html">
 			<div class="form__name">
-				<span class="form__group">
+				<div class="form__group">
 					<label class="form__label form__label--input" for="first-name">Förnamn<span
 							class="form__required-star">*</span></label>
 					<input class="form__input" title="Fyll i ditt förnamn" type="text" id="first-name"
 						placeholder="Förnamn" required>
-				</span>
-				<span class="form__group">
+				</div>
+
+				<div class="form__group">
 					<label class="form__label form__label--input" for="surname">Efternamn<span
 							class="form__required-star">*</span></label>
 					<input class="form__input" title="Fyll i ditt efternamn" type="text" id="surname"
 						placeholder="Efternamn" required>
-				</span>
+				</div>
 			</div>
+
 			<label class="form__label form__label--input" for="adress">Adress</label>
 			<input class="form__input" title="Fyll i din adress" type="text" id="adress" placeholder="Adress">
+
 			<div class="form__zip-and-city">
-				<span class="form__group">
+				<div class="form__group">
 					<label class="form__label form__label--input" for="zip-code">Postnummer</label>
 					<input class="form__input form__input--zip" title="Ange ett postnummer med 5 siffror" type="text"
 						placeholder="Postnummer" id="zip-code" pattern="[0-9]{5}">
-				</span>
-				<span class="form__group">
+				</div>
+
+				<div class="form__group">
 					<label class="form__label form__label--input" for="city">Stad/ort</label>
 					<input class="form__input form__input--city" title="Ange en stad/ort" type="text" id="city"
 						placeholder="Stad/ort">
-				</span>
+				</div>
 			</div>
+
 			<label class="form__label form__label--input" for="email">E-post<span
 					class="form__required-star">*</span></label>
 			<input class="form__input" title="Fyll i en giltig e-postadress ex. bättrewebb@gmail.com" type="text"
@@ -73,34 +78,36 @@
 						id="all-days" checked>
 					<label class="form__label form__label--radio" for="all-days">Alla dagar <span
 							class="form__price">1500:-</span></label>
-					</span>
+
 				</div>
 
 				<div class="form__buy-section form__buy-section--one">
-					<span class="form__choice form__choice--one">
+					<div class="form__choice form__choice--one">
 						<input class="form__input form__input--radio form__input--one" type="radio" name="day-pass"
 							id="separate-days">
 						<label class="form__label form__label--radio" for="separate-days">Enskild dag</label>
-					</span>
+					</div>
+
 					<div class="form__day-section">
-						<span class="form__buy-choice form__buy-choice--day">
+						<div class="form__choice form__choice--day">
 							<input class="form__input form__input--checkbox" type="checkbox" name="day-pass-check"
 								id="friday">
 							<label class="form__label form__label--checkbox" for="friday">Fredag<span
 									class="form__price">600:-</span></label>
-						</span>
-						<span class="form__buy-choice form__buy-choice--day">
+						</div>
+
+						<div class="form__choice form__choice--day">
 							<input class="form__input form__input--checkbox" type="checkbox" name="day-pass-check"
 								id="saturday">
 							<label class="form__label form__label--checkbox" for="saturday">Lördag<span
 									class="form__price">700:-</span></label>
-						</span>
-						<span class="form__buy-choice form__buy-choice--day">
+						</div>
+						<div class="form__choice form__choice--day">
 							<input class="form__input form__input--checkbox" type="checkbox" name="day-pass-checkbox"
 								id="sunday">
 							<label class="form__label form__label--checkbox" for="sunday">Söndag<span
 									class="form__price">600:-</span></label>
-						</span>
+						</div>
 					</div>
 				</div>
 			</div>

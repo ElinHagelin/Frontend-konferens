@@ -1,7 +1,6 @@
 .header {
 	height: 100vh;
 	width: 100%;
-	/* height: 100%; */
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 3fr 1fr 1fr 2fr 2fr;
@@ -31,9 +30,8 @@
 	align-self: center;
 }
 
-.header__span {
+.header__div {
 	grid-area: h3;
-
 }
 
 .header__h3 {
@@ -41,17 +39,14 @@
 }
 
 .header__button {
-	/* margin-bottom: 3em; */
 	font-size: 1.2em;
-	/* margin: 1em 0; */
 	padding: 0.5em 1em;
 	background-color: var(--button-color-light);
-	/* border: 2px solid var(--button-border-coral); */
 	box-shadow: 0 10px 20px -8px var(--text-color-dark);
 	border-radius: 2em;
 	text-decoration: none;
 	color: var(--text-color-dark);
-	max-width: 7em;
+	max-width: 9em;
 	justify-self: center;
 	text-align: center;
 	max-height: 2.5em;
@@ -72,7 +67,6 @@
 	grid-area: sign-up;
 	align-self: start;
 }
-
 
 @media screen and (min-width: 350px) and (max-width: 599px) {
 
@@ -110,20 +104,13 @@
 	}
 
 	.header__h2,
-	.header__span {
+	.header__div {
 		grid-column: 2;
 	}
 
 	.header__h2,
 	.header__h3 {
 		color: var(--text-color-light);
-	}
-
-	.header__span {
-		display: flex;
-		gap: 1em;
-		justify-self: center;
-		align-self: flex-start;
 	}
 
 	.header__h3 {
@@ -158,12 +145,6 @@
 		font-size: 2em;
 	}
 
-	.header__span {
-		display: flex;
-		gap: 1em;
-		justify-self: center;
-	}
-
 	.header__button {
 		font-size: 1.4em;
 		padding: 0.5em 1em;
@@ -176,5 +157,4 @@
 		transition: 0.5s;
 		color: var(--text-color-light);
 	}
-
 }

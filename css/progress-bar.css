@@ -12,11 +12,6 @@
 	flex-direction: column;
 	align-items: center;
 	flex: 1;
-
-
-	/* @media (max-width: 768px) {
-		font-size: 12px;
-	} */
 }
 
 .stepper__item::before {
@@ -49,7 +44,6 @@
 	height: 40px;
 	border-radius: 50%;
 	background: var(--progress-bar-background);
-	/* margin-bottom: 6px; */
 }
 
 .stepper__item--active {
@@ -61,8 +55,6 @@
 .stepper__item--active .stepper__counter {
 	width: 50px;
 	height: 50px;
-
-
 }
 
 .stepper__item--completed .stepper__counter {

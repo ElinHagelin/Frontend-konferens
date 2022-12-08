@@ -37,7 +37,7 @@
 .toggle__label--friday {
 	top: 7em;
 	left: 20%;
-	transform: translate(-40%);
+	transform: translate(-70%);
 }
 
 .toggle__label--saturday {
@@ -123,6 +123,7 @@
 .card__time-and-place {
 	margin-top: 1em;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-around;
 	width: 100%;
 }
