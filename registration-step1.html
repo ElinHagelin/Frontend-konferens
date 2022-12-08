@@ -66,28 +66,46 @@
 				required>
 
 			<p class="form__buy-pass">Jag vill köpa pass för:</p>
-			<span class="form__radio">
-				<input class="form__input form__input--radio" type="radio" name="day-pass" id="all-days" checked>
-				<label class="form__label form__label--radio" for="all-days">Alla dagar <span
-						class="form__price">1500:-</span></label>
-			</span>
-			<span class="form__radio">
-				<input class="form__input form__input--radio" type="radio" name="day-pass" id="friday">
-				<label class="form__label form__label--radio" for="friday">Fredag<span
-						class="form__price">600:-</span></label>
-			</span>
-			<span class="form__radio">
-				<input class="form__input form__input--radio" type="radio" name="day-pass" id="saturday">
-				<label class="form__label form__label--radio" for="saturday">Lördag<span
-						class="form__price">700:-</span></label>
-			</span>
-			<span class="form__radio">
-				<input class="form__input form__input--radio" type="radio" name="day-pass" id="sunday">
-				<label class="form__label form__label--radio" for="sunday">Söndag<span
-						class="form__price">600:-</span></label>
-			</span>
+			<div class="form__buy-container">
+				<div class="form__buy-section form__buy-section--all">
 
-			<button class="form__button">Nästa</button>
+					<input class="form__input form__input--radio form__input--all" type="radio" name="day-pass"
+						id="all-days" checked>
+					<label class="form__label form__label--radio" for="all-days">Alla dagar <span
+							class="form__price">1500:-</span></label>
+					</span>
+				</div>
+
+				<div class="form__buy-section form__buy-section--one">
+					<span class="form__choice form__choice--one">
+						<input class="form__input form__input--radio form__input--one" type="radio" name="day-pass"
+							id="separate-days">
+						<label class="form__label form__label--radio" for="separate-days">Enskild dag</label>
+					</span>
+					<div class="form__day-section">
+						<span class="form__buy-choice form__buy-choice--day">
+							<input class="form__input form__input--checkbox" type="checkbox" name="day-pass-check"
+								id="friday">
+							<label class="form__label form__label--checkbox" for="friday">Fredag<span
+									class="form__price">600:-</span></label>
+						</span>
+						<span class="form__buy-choice form__buy-choice--day">
+							<input class="form__input form__input--checkbox" type="checkbox" name="day-pass-check"
+								id="saturday">
+							<label class="form__label form__label--checkbox" for="saturday">Lördag<span
+									class="form__price">700:-</span></label>
+						</span>
+						<span class="form__buy-choice form__buy-choice--day">
+							<input class="form__input form__input--checkbox" type="checkbox" name="day-pass-checkbox"
+								id="sunday">
+							<label class="form__label form__label--checkbox" for="sunday">Söndag<span
+									class="form__price">600:-</span></label>
+						</span>
+					</div>
+				</div>
+			</div>
+			</div>
+			<button class="form__button form__button--next">Nästa</button>
 
 		</form>
 	</main>
