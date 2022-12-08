@@ -23,7 +23,7 @@ body {
 		"what"
 		"where"
 		"when"
-		"seminar-slider";
+		"seminar-container";
 	/* "sign-up-bottom"; */
 	gap: 2em;
 
@@ -117,7 +117,7 @@ body {
 			"main-heading main-heading"
 			"what what"
 			"where when"
-			"seminar-slider seminar-slider";
+			"seminar-container seminar-container";
 		/* "sign-up-bottom sign-up-bottom"; */
 		gap: 2em;
 	}
@@ -178,8 +178,7 @@ body {
 		grid-template-areas:
 			"main-heading main-heading main-heading"
 			"what when where"
-			"seminar-slider seminar-slider seminar-slider";
-		/* "sign-up-bottom sign-up-bottom sign-up-bottom"; */
+			"seminar-container seminar-container seminar-container";
 		gap: 2em;
 	}
 

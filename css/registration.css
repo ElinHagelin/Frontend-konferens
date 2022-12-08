@@ -17,15 +17,13 @@ body {
 }
 
 .main__heading {
-	margin: 2em 0;
+	margin: 2em 2em;
 	font-size: 1.1em;
 }
 
 .form {
 	background-color: var(--text-container-background);
 	border-radius: 1em;
-	min-width: 18em;
-	max-width: 60em;
 	min-height: 15em;
 	display: flex;
 	flex-direction: column;
@@ -172,8 +170,6 @@ body {
 
 	.form {
 		min-width: 30em;
-
-		min-height: 35em;
 	}
 
 	.form__input {

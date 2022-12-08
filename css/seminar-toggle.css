@@ -1,5 +1,5 @@
 .seminar-container {
-	grid-area: seminar-slider;
+	grid-area: seminar-container;
 	position: relative;
 	padding-top: 5em;
 	display: flex;
@@ -85,6 +85,10 @@
 .toggle__input:checked+.toggle__label+.card-container * {
 	opacity: 1;
 	transition: all 0.8s ease;
+}
+
+.toggle__input:focus+.toggle__label {
+	font-weight: bold;
 }
 
 .card {
